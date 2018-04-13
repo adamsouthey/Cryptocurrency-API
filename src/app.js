@@ -32,7 +32,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <main className="container">
         {!this.state.coins && !this.state.error && <p>Loading...</p>}
         {this.state.error && [
           <h1 key={1}>Oops! There was an error with your request</h1>,
@@ -58,7 +58,7 @@ class App extends React.Component {
 
 
         ]}
-      </div>
+      </main>
 
     );
   }

@@ -33,5 +33,7 @@
     "url-loader": "^0.5.9",
     "webpack": "^3.3.0",
     "webpack-dev-server": "^2.5.1"
-  }
+  },
+  "repository": "git@github.com:adamsouthey/cryptocurrency-api.git",
+  "author": "adamsouthey <adamjsouthey@gmail.com>"
 }
