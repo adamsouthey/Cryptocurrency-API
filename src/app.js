@@ -28,12 +28,14 @@ class App extends React.Component {
   render() {
     return(
       <div>
+      <div className="row">
 
         {Object.keys(this.state.cryptos).map((key) => (
+          <div className='col-md-4'>
           <div id="crypto-container">
             <ul>
-              <li>
-                <span className="left">Coin: {key}</span>
+
+                <h2 className="left">Coin: {key}</h2>
                 <li><span className="right">Current Price: {this.state.cryptos[key].GBP.PRICE} </span></li>
                 <li><span className="right">High24Hr: {this.state.cryptos[key].GBP.HIGH24HOUR} </span></li>
                 <li><span className="right">Low24Hr: {this.state.cryptos[key].GBP.LOW24HOUR} </span></li>
@@ -41,10 +43,12 @@ class App extends React.Component {
                 <li><span className="right">Change%24Hr{this.state.cryptos[key].GBP.CHANGEPCT24HOUR} </span></li>
                 <li><span className="right">OpeningDayPrice: {this.state.cryptos[key].GBP.OPENDAY} </span></li>
                 <li><span className="right">Trading Supply: {this.state.cryptos[key].GBP.SUPPLY} </span></li>
-              </li>
+
             </ul>
           </div>
+          </div>
         ))}
+      </div>
       </div>
     )}
 
