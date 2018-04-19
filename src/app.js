@@ -26,30 +26,34 @@ class App extends React.Component {
   }
 
   render() {
-    return(
-      <div>
+    const cryptoInfo =
+    <div>
       <div className="row">
-
         {Object.keys(this.state.cryptos).map((key) => (
-          <div className='col-md-4'>
-          <div id="crypto-container">
-            <ul>
-
+          <div className='col-md-3'>
+            <div id="crypto-container">
+              <ul>
                 <h2 className="left">Coin: {key}</h2>
-                <li><span className="right">Current Price: {this.state.cryptos[key].GBP.PRICE} </span></li>
-                <li><span className="right">High24Hr: {this.state.cryptos[key].GBP.HIGH24HOUR} </span></li>
-                <li><span className="right">Low24Hr: {this.state.cryptos[key].GBP.LOW24HOUR} </span></li>
-                <li><span className="right">Change24Hr: {this.state.cryptos[key].GBP.CHANGE24HOUR} </span></li>
-                <li><span className="right">Change%24Hr{this.state.cryptos[key].GBP.CHANGEPCT24HOUR} </span></li>
-                <li><span className="right">OpeningDayPrice: {this.state.cryptos[key].GBP.OPENDAY} </span></li>
-                <li><span className="right">Trading Supply: {this.state.cryptos[key].GBP.SUPPLY} </span></li>
-
-            </ul>
-          </div>
+                <li><span key={1} className="right">Current Price: {this.state.cryptos[key].GBP.PRICE} </span></li>
+                <li><span key={2} className="right">High24Hr: {this.state.cryptos[key].GBP.HIGH24HOUR} </span></li>
+                <li><span key={3} className="right">Low24Hr: {this.state.cryptos[key].GBP.LOW24HOUR} </span></li>
+                <li><span key={4} className="right">Change24Hr: {this.state.cryptos[key].GBP.CHANGE24HOUR} </span></li>
+                <li><span key={5} className="right">Change%24Hr{this.state.cryptos[key].GBP.CHANGEPCT24HOUR} </span></li>
+                <li><span key={6} className="right">OpeningDayPrice: {this.state.cryptos[key].GBP.OPENDAY} </span></li>
+                <li><span key={7} className="right">Trading Supply: {this.state.cryptos[key].GBP.SUPPLY} </span></li>
+              </ul>
+            </div>
           </div>
         ))}
       </div>
+    </div>
+    return(
+      <div>
+        <h1>Coin Information</h1>
+        { cryptoInfo }
       </div>
+
+
     )}
 
 
